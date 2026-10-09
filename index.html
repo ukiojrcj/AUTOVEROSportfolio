@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a0b">
+  <meta name="description" content="AutoVerse — a cinematic automotive visual archive. Four night frames, one car at a time.">
+  <title>AutoVerse — Beyond the Drive</title>
+  <link rel="preload" as="image" href="assets/cars/01-night-run.jpeg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#collection">Skip intro and go to the collection</a>
+  <div class="ambient-grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#collection" aria-label="AutoVerse — collection">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="17" stroke="currentColor" stroke-width="1.2" opacity=".5"/>
+            <path d="M8 24.8 20 7l12 17.8M13.4 24.8 20 15l6.6 9.8M11.1 28h17.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">Auto<span>Verse</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#collection" class="nav-link is-active">Collection</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-meta" aria-label="Visual archive">
+        <span class="status-light" aria-hidden="true"></span>
+        <span>VISUAL ARCHIVE</span>
+        <span class="header-meta-divider">/</span>
+        <span>VOL. 01</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="showcase" id="collection" aria-label="AutoVerse car collection">
+      <div class="media-frame" id="mediaFrame">
+        <img class="hero-image" id="heroImage" src="assets/cars/01-night-run.jpeg" alt="Dark car seen from behind on an amber-lit road at night.">
+        <img class="wheel-image" id="wheelImage" alt="" aria-hidden="true">
+        <div class="image-fallback" id="imageFallback" hidden>
+          <span class="fallback-mark" aria-hidden="true">AV</span>
+          <p>Image not found</p>
+          <code id="imageFallbackPath">assets/cars/01-night-run.jpeg</code>
+        </div>
+        <div class="media-vignette"></div>
+        <div class="media-glow" aria-hidden="true"></div>
+      </div>
+
+      <div class="showcase-topline" aria-hidden="true">
+        <div class="topline-left">
+          <span class="topline-square"></span>
+          <span>CURATED AUTOMOTIVE IMAGERY</span>
+          <span class="topline-separator">/</span>
+          <span id="sceneLabelTop">AFTER DARK</span>
+        </div>
+        <div class="topline-right"><span id="frameLabel">FRAME 01</span><span class="topline-rule"></span><span>2026</span></div>
+      </div>
+
+      <div class="hero-content" id="heroContent">
+        <div class="car-copy">
+          <div class="scene-eyebrow">
+            <span class="accent-rule"></span>
+            <span id="sceneLabel">NIGHT FRAME / 01</span>
+          </div>
+          <p class="identity-status"><span class="identity-dot" aria-hidden="true"></span><span id="identityLabel">MODEL IDENTITY NOT VERIFIED</span></p>
+          <h1 class="car-title" id="carTitle">
+            <span id="titleFirst">Dusk</span>
+            <em id="titleSecond">Runner</em>
+          </h1>
+          <p class="car-description" id="carDescription">An after-dark study in warm sodium light, moving shadow and red tail lamps.</p>
+          <div class="hero-actions">
+            <button class="button button-primary" id="exploreWheels" type="button" aria-label="Explore wheel details">
+              <span class="button-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.2"/><circle cx="12" cy="12" r="2.7" stroke="currentColor" stroke-width="1.2"/><path d="M12 3.8v5.4m7.1-1.1-4.7 2.7m1.7 7.4-2.6-4.7m-7.4 1.7 4.7-2.6M4.9 8.1l4.7 2.7" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+              </span>
+              <span>Explore wheels</span>
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+            <span class="action-divider" aria-hidden="true"></span>
+            <span class="action-note">DIRECT IMAGE ZOOM</span>
+          </div>
+        </div>
+
+        <aside class="spec-panel" aria-label="Vehicle details">
+          <div class="spec-panel-head">
+            <span>VEHICLE FILE</span>
+            <span class="file-status"><span></span> OPEN</span>
+          </div>
+          <dl class="quick-specs">
+            <div class="quick-spec-row">
+              <dt>Make / model</dt>
+              <dd id="specModel">Unverified</dd>
+            </div>
+            <div class="quick-spec-row">
+              <dt>Year</dt>
+              <dd id="specYear">Not provided</dd>
+            </div>
+            <div class="quick-spec-row">
+              <dt>Visual tone</dt>
+              <dd id="specColor">Near-black</dd>
+            </div>
+          </dl>
+          <p class="spec-panel-note">Technical figures are held until the exact model and variant are confirmed.</p>
+          <button class="spec-trigger" id="fullSpecsButton" type="button" aria-haspopup="dialog">
+            <span>Full specifications</span><span aria-hidden="true">＋</span>
+          </button>
+        </aside>
+      </div>
+
+      <div class="wheel-hud" id="wheelHud" hidden>
+        <div class="wheel-hud-card">
+          <div class="wheel-hud-top"><span class="hud-indicator"></span><span id="wheelViewLabel">DETAIL VIEW / DIRECT CROP</span></div>
+          <h2>Wheel study</h2>
+          <p id="wheelDescription">A close crop of the supplied photograph. Wheel design and component details are not confirmed.</p>
+          <div class="wheel-detail-row"><span>DEDICATED CLOSE-UP</span><span id="wheelPhotoStatus">Not supplied</span></div>
+          <div class="wheel-hud-actions">
+            <button class="button button-primary button-compact" id="backToCar" type="button">
+              <span aria-hidden="true">←</span><span>Back to car</span>
+            </button>
+            <button class="text-action" id="wheelPhotoButton" type="button" hidden>Use close-up photo ↗</button>
+            <button class="text-action" id="wheelCropButton" type="button" hidden>Return to image zoom ↗</button>
+          </div>
+          <p class="wheel-hud-note" id="wheelSpecNote">No wheel specifications are shown until the exact vehicle variant is known.</p>
+        </div>
+      </div>
+
+      <div class="gallery-controls" aria-label="Collection navigation">
+        <div class="controls-label">
+          <span class="control-index-mark" aria-hidden="true">01</span>
+          <span class="controls-label-text">NIGHT SERIES</span>
+        </div>
+        <div class="controls-center">
+          <button class="nav-arrow" id="previousButton" type="button" aria-label="Previous image">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5m0 0 6.5-6.5M5 12l6.5 6.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>PREV</span>
+          </button>
+          <div class="position-indicator" aria-label="Image position">
+            <div class="position-numbers"><span id="currentNumber">01</span><span class="position-divider">/</span><span id="totalNumber">04</span></div>
+            <div class="progress-track" id="progressTrack" role="progressbar" aria-label="Collection progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1"><span id="progressFill"></span></div>
+          </div>
+          <button class="nav-arrow nav-arrow-next" id="nextButton" type="button" aria-label="Next image">
+            <span>NEXT</span>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m0 0-6.5-6.5M19 12l-6.5 6.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <div class="keyboard-hint"><span>← &nbsp;→</span><span>TO EXPLORE</span></div>
+      </div>
+
+      <div class="sr-only" id="slideAnnouncer" aria-live="polite" aria-atomic="true"></div>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="aboutTitle">
+      <div class="section-kicker"><span class="accent-rule"></span><span>THE AUTO VERSE / ABOUT</span></div>
+      <div class="about-grid">
+        <div class="about-heading-wrap">
+          <p class="section-index">A SMALL VISUAL ARCHIVE · VOL. 01</p>
+          <h2 id="aboutTitle">Built around<br>the <em>feeling.</em></h2>
+        </div>
+        <div class="about-copy">
+          <p>AutoVerse is a cinematic home for the cars that stay with you after the road disappears. One image, one machine, one frame at a time.</p>
+          <p class="about-note">The current collection uses four images supplied for this project. Vehicle names and technical figures remain unverified until the exact models and trims are confirmed.</p>
+          <a class="about-link" href="#collection"><span>Return to the collection</span><span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="about-rule"></div>
+      <div class="archive-facts" aria-label="Archive information">
+        <div><span class="fact-number">04</span><span class="fact-label">SUPPLIED FRAMES</span></div>
+        <div><span class="fact-number">01</span><span class="fact-label">CAR AT A TIME</span></div>
+        <div><span class="fact-number">00</span><span class="fact-label">UNVERIFIED SPECS INVENTED</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-top">
+      <a class="brand footer-brand" href="#collection" aria-label="AutoVerse — back to collection">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="17" stroke="currentColor" stroke-width="1.2" opacity=".5"/><path d="M8 24.8 20 7l12 17.8M13.4 24.8 20 15l6.6 9.8M11.1 28h17.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="brand-name">Auto<span>Verse</span></span>
+      </a>
+      <div class="footer-contact">
+        <span class="section-index">CONTACT / COLLABORATIONS</span>
+        <a class="footer-email" href="mailto:your-email@example.com">your-email@example.com <span aria-hidden="true">↗</span></a>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/yourhandle/" target="_blank" rel="noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+          <a href="https://www.youtube.com/@yourhandle" target="_blank" rel="noreferrer">YouTube <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="footer-stamp" aria-hidden="true">AV<span>®</span></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="copyrightYear">2026</span> AUTOVERSE</span>
+      <span>BEYOND THE DRIVE.</span>
+      <a href="#collection">BACK TO TOP ↑</a>
+    </div>
+  </footer>
+
+  <dialog class="spec-dialog" id="specDialog" aria-labelledby="dialogTitle">
+    <div class="dialog-topline"><span><span class="dialog-dot"></span> VEHICLE DOSSIER</span><button class="dialog-close" id="closeSpecs" type="button" aria-label="Close specifications">×</button></div>
+    <p class="section-index">COLLECTION / <span id="dialogFrameNumber">01</span></p>
+    <h2 id="dialogTitle">Dusk Runner</h2>
+    <p class="dialog-subtitle" id="dialogSubtitle">Technical specification sheet</p>
+    <dl class="full-spec-list" id="fullSpecList"></dl>
+    <p class="dialog-note" id="dialogNote">Figures are not shown unless verified for the exact model and variant.</p>
+  </dialog>
+
+  <div class="intro" id="intro" role="region" aria-label="AutoVerse introduction">
+    <div class="intro-image-wrap" aria-hidden="true"><img id="introImage" src="assets/cars/01-night-run.jpeg" alt=""></div>
+    <div class="intro-overlay"></div>
+    <div class="intro-lines" aria-hidden="true"></div>
+    <div class="intro-top">
+      <a class="intro-brand" href="#collection" aria-label="AutoVerse"><span class="intro-brand-mark">AV</span><span>AUTOVERSE</span></a>
+      <span class="intro-edition">A CINEMATIC AUTOMOTIVE ARCHIVE <span>—</span> VOL. 01</span>
+    </div>
+    <div class="intro-copy">
+      <p class="intro-kicker"><span class="intro-kicker-line"></span>FOUR FRAMES. ONE AT A TIME.</p>
+      <h2>Beyond<br><em>the drive.</em></h2>
+      <p class="intro-subtitle">A collection of machines, motion and after-dark atmosphere.</p>
+      <button class="intro-cta" id="enterCollection" type="button"><span>Explore collection</span><span class="cta-circle" aria-hidden="true">↘</span></button>
+    </div>
+    <button class="skip-intro" id="skipIntro" type="button">Skip intro <span aria-hidden="true">↗</span></button>
+    <div class="intro-bottom" aria-hidden="true"><span>IMAGE ARCHIVE / 2026</span><span>01 — 04</span></div>
+  </div>
+</body>
+</html>
